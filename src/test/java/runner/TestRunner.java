@@ -15,7 +15,7 @@ import io.cucumber.junit.CucumberOptions;
 	    },
 	    dryRun = false,
 	    monochrome = true,
-	    tags = "@Login"
+	    tags = "@AllProduct"
 	)
 
 public class TestRunner {

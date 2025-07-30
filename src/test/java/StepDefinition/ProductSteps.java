@@ -5,6 +5,7 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 
 import config.ConfigReader;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import pages.ProductPage;
 import pages.loginPage;
@@ -13,7 +14,7 @@ import utils.DriverFactory;
 public class ProductSteps {
    
 	private WebDriver driver = DriverFactory.getDriver();
-	private ProductPage productPage = new ProductPage();
+	private ProductPage productPage = new ProductPage(driver);
 
 	private ConfigReader configReader = new ConfigReader();
 	private Properties prop = configReader.init_prop();
@@ -39,12 +40,30 @@ public void user_click_the_search_icon() {
 
 @Then("User print the all the Listed tshirt")
 public void user_print_the_all_the_listed_tshirt() {
-	// Assuming there's a method in ProductPage to get the list of products
-	// This is a placeholder for the actual implementation
-	System.out.println("Listed T-shirts: ");
-	// productPage.getListedTshirts().forEach(System.out::println);
-	System.out.println("This feature is not implemented yet.");
+	System.out.println("Printing all the listed products:");
+	productPage.printAllProductNames();
+	System.out.println("Listed products printed successfully.");
 }
 
+
+
+@Given("User Cick The ViewProduct Button")
+public void user_cick_the_view_product_button() {
+	productPage.ClickProduct1();
+ System.out.println("Cick The ViewProduct Button");
+   
+}
+
+@Then("Verify that detail detail is visible: product name, category, price, availability, condition, brand")
+public void verify_that_detail_detail_is_visible_product_name_category_price_availability_condition_brand() {
+	productPage.printProductName();
+	productPage.Printcategory();
+	productPage.PrintPrice();
+	productPage.PrintAvalability();
+	productPage.Printcategory();
+	productPage.PrintBrand();
+	
+   
+}
 
 }

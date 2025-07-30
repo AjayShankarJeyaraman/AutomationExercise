@@ -21,5 +21,5 @@ Feature: Register functionality
     And User Click the Contiune button 
   
  Examples:
-  | Name        | EmailAddress           | PasswordExample   | FirstName  | LastName  | Company | Address1                 | State     | City       | Zipcode  | MobileNumber  |
-  | AjayShankar | virtusa@mailinator.com | virtusa@123       | Ajay       | Shankar   | Virtusa | 11/25g,Annamadam Street  | Tamilnadu | Coimbatore | 641402   | 9150652670    |  
+  | Name        | EmailAddress             | PasswordExample   | FirstName  | LastName  | Company | Address1                 | State     | City       | Zipcode  | MobileNumber  |
+  | AjayShankar |  testajay@mailinator.com | Test@1234     | Ajay       | Shankar   | Virtusa | 11/25g,Annamadam Street  | Tamilnadu | Coimbatore | 641402   | 9150652670    |  
